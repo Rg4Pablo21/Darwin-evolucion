@@ -5,28 +5,27 @@ body {
     background: #f4f4f4;
 }
 
-.Pablo1{
+.header {
     font-size: 2em;
     text-align: center;
     color: #fff;
-    background: linear-gradient(to right, #000000, #490386);
+    background: linear-gradient(to right, #000000, #8b0202);
     padding: 20px 40px;
     border-radius: 1px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
 }
 
-.girón1{
+footer{
     font-size: 2em;
     text-align: center;
     color: #fff;
-    background: linear-gradient(to right, #000000, #490386);
+    background: linear-gradient(to right, #000000, #8b0202);
     padding: 20px 40px;
     border-radius: 1px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
 }
-
 
 .timeline {
     position: relative;
@@ -54,15 +53,15 @@ body {
     z-index: 1;
 }
 
-.left {
+.manzana {
     left: 0;
 }
 
-.right {
+.platano {
     left: 50%;
 }
 
-.left::before {
+.manzana::before {
     content: " ";
     height: 100%;
     position: absolute;
@@ -73,7 +72,7 @@ body {
     z-index: -1;
 }
 
-.right::before {
+.platano::before {
     content: " ";
     height: 100%;
     position: absolute;
@@ -84,11 +83,11 @@ body {
     z-index: -1;
 }
 
-.right::after {
+.platano::after {
     left: -16px;
 }
 
-.content {
+.lapiz {
     padding: 20px 30px;
     background-color: white;
     position: relative;
@@ -96,11 +95,11 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.content h2 {
+.cuaderno h2 {
     margin: 0;
 }
 
-.content p {
+.cuaderno p {
     margin: 10px 0 0;
     color: #555;
 }
@@ -120,14 +119,13 @@ body {
     height: 70%;
 }
 
-
-/* Tamaño de telefono 375 */
+/* Media Query para teléfonos */
 @media screen and (max-width: 375px) {
     .timeline::before {
         left: 31px;
     }
 
-    .Archivos  {
+    .container {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
@@ -139,16 +137,16 @@ body {
         height: 0;
     }
 
-    .left::before, .right::before {
+    .manzana::before, .platano::before {
         left: 60px;
         right: auto;
     }
 
-    .left::after, .right::after {
+    .manzana::after, .platano::after {
         left: 15px;
     }
 
-    .right {
+    .platano {
         left: 0%;
     }
 
@@ -158,46 +156,26 @@ body {
     }
 }
 
-/* Tamaño de tableta 1024 */
+/* Media Query para tabletas */
 @media screen and (max-width: 1024px) {
     .container {
         width: 100%;
         padding: 20%;
     }
 
-    .left, .right {
+    .manzana, .platano {
         left: 0;
     }
 
-    .left::before, .right::before {
+    .manzana::before, .platano::before {
         display: none;
     }
 
-    .left::after, .right::after {
+    .manzana::after, .platano::after {
         left: calc(50% - 12.5%);
     }
 
     .timeline::before {
         display: none;
-    }
-}
-
-/*Tamaño de Escritorio 3066*/
-@media screen and (min-width: 3066px) {
-    .timeline {
-        max-width: 2000px;
-    }
-
-    .container {
-        padding: 20px 80px;
-    }
-
-    .content {
-        padding: 30px 50px;
-    }
-
-    .header, footer {
-        font-size: 2.5em;
-        padding: 30px 60px;
     }
 }
