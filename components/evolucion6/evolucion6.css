@@ -6,11 +6,11 @@ body {
 }
 
 .cabeza-extrana, .pie-de-pagina-raro {
-    font-size: 1.5em; /* Tamaño reducido del encabezado */
+    font-size: 1.5em; 
     text-align: center;
     color: #fff;
     background: linear-gradient(to right, #000000, #8b0202);
-    padding: 10px 20px; /* Reducir el padding para el encabezado */
+    padding: 10px 20px; 
     border-radius: 1px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
@@ -29,7 +29,7 @@ body {
     width: 50%;
     box-sizing: border-box;
     display: flex;
-    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    align-items: center; 
 }
 
 .contenedor-cupcake::after, .contenedor-donut::after {
@@ -96,13 +96,13 @@ body {
 }
 
 .imagen1 img, .imagen2 img, .imagen3 img, .imagen4 img, .imagen5 img, .imagen6 img, .imagen7 img, .imagen8 img, .imagen9 img, .imagen10 img {
-    width: 300px; /* Ajustar el tamaño de las imágenes */
+    width: 300px; 
     height: auto;
     display: block;
-    margin: 0 auto; /* Centrar las imágenes */
+    margin: 0 auto; 
 }
 
-/* Media Query para teléfonos */
+
 @media screen and (max-width: 375px) {
     .linea-de-tiempo::before {
         left: 31px;
@@ -129,7 +129,7 @@ body {
     }
 }
 
-/* Media Query para tabletas */
+
 @media screen and (max-width: 1024px) {
     .contenedor-cupcake, .contenedor-donut {
         width: 100%;
