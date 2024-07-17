@@ -5,43 +5,34 @@ body {
     background: #f4f4f4;
 }
 
-.header {
-    font-size: 2em;
+.cabeza-extrana, .pie-de-pagina-raro {
+    font-size: 1.5em; /* Tamaño reducido del encabezado */
     text-align: center;
     color: #fff;
     background: linear-gradient(to right, #000000, #8b0202);
-    padding: 20px 40px;
+    padding: 10px 20px; /* Reducir el padding para el encabezado */
     border-radius: 1px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
 }
 
-footer{
-    font-size: 2em;
-    text-align: center;
-    color: #fff;
-    background: linear-gradient(to right, #000000, #8b0202);
-    padding: 20px 40px;
-    border-radius: 1px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-}
-
-.timeline {
+.linea-de-tiempo {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.container {
+.contenedor-cupcake, .contenedor-donut {
     padding: 10px 40px;
     position: relative;
     background: white;
     width: 50%;
     box-sizing: border-box;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
 }
 
-.container::after {
+.contenedor-cupcake::after, .contenedor-donut::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -53,15 +44,15 @@ footer{
     z-index: 1;
 }
 
-.manzana {
+.contenedor-cupcake {
     left: 0;
 }
 
-.platano {
+.contenedor-donut {
     left: 50%;
 }
 
-.manzana::before {
+.contenedor-cupcake::before {
     content: " ";
     height: 100%;
     position: absolute;
@@ -72,7 +63,7 @@ footer{
     z-index: -1;
 }
 
-.platano::before {
+.contenedor-donut::before {
     content: " ";
     height: 100%;
     position: absolute;
@@ -83,11 +74,11 @@ footer{
     z-index: -1;
 }
 
-.platano::after {
+.contenedor-donut::after {
     left: -16px;
 }
 
-.lapiz {
+.objeto-brillante, .objeto-radiante {
     padding: 20px 30px;
     background-color: white;
     position: relative;
@@ -95,87 +86,69 @@ footer{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.cuaderno h2 {
+.objeto-brillante h2, .objeto-radiante h2 {
     margin: 0;
 }
 
-.cuaderno p {
+.objeto-brillante p, .objeto-radiante p {
     margin: 10px 0 0;
     color: #555;
 }
 
-.edit-button {
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.foto1 img, .foto2 img, .foto3 img, .foto4 img, .foto5 img, .foto6 img, .foto7 img, .foto8 img, .foto9 img, .foto10 img {
-    width: 70%;
-    height: 70%;
+.imagen1 img, .imagen2 img, .imagen3 img, .imagen4 img, .imagen5 img, .imagen6 img, .imagen7 img, .imagen8 img, .imagen9 img, .imagen10 img {
+    width: 300px; /* Ajustar el tamaño de las imágenes */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrar las imágenes */
 }
 
 /* Media Query para teléfonos */
 @media screen and (max-width: 375px) {
-    .timeline::before {
+    .linea-de-tiempo::before {
         left: 31px;
     }
 
-    .container {
+    .contenedor-cupcake, .contenedor-donut {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
 
-    .container::before {
+    .contenedor-cupcake::before, .contenedor-donut::before {
         left: 60px;
         border: none;
         height: 0;
     }
 
-    .manzana::before, .platano::before {
-        left: 60px;
-        right: auto;
-    }
-
-    .manzana::after, .platano::after {
+    .contenedor-cupcake::after, .contenedor-donut::after {
         left: 15px;
     }
 
-    .platano {
+    .contenedor-donut {
         left: 0%;
-    }
-
-    .foto1 img, .foto2 img, .foto3 img, .foto4 img, .foto5 img, .foto6 img, .foto7 img, .foto8 img, .foto9 img, .foto10 img {
-        width: 100%;
-        height: auto;
     }
 }
 
 /* Media Query para tabletas */
 @media screen and (max-width: 1024px) {
-    .container {
+    .contenedor-cupcake, .contenedor-donut {
         width: 100%;
         padding: 20%;
     }
 
-    .manzana, .platano {
+    .contenedor-cupcake, .contenedor-donut {
         left: 0;
     }
 
-    .manzana::before, .platano::before {
+    .contenedor-cupcake::before, .contenedor-donut::before {
         display: none;
     }
 
-    .manzana::after, .platano::after {
+    .contenedor-cupcake::after, .contenedor-donut::after {
         left: calc(50% - 12.5%);
     }
 
-    .timeline::before {
+    .linea-de-tiempo::before {
         display: none;
     }
 }
